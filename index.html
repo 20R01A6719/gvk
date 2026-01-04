@@ -3,77 +3,341 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy New Year - GVK Industries</title>
+    <title>GVK Industries - Food & Beverage Machines</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        * {
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
+            padding: 60px 20px;
         }
-        .container {
-            max-width: 800px;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            font-size: 3.5em;
+        .new-year {
+            font-size: 2.5em;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             animation: glow 2s ease-in-out infinite alternate;
         }
         @keyframes glow {
-            from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3); }
-            to { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.6); }
-        }
-        .company-info {
-            margin-top: 40px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
+            from { text-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+            to { text-shadow: 0 0 30px rgba(255, 255, 255, 0.6); }
         }
         .company-name {
-            font-size: 2em;
+            font-size: 3em;
             font-weight: bold;
             color: #ffd700;
-            margin-bottom: 15px;
-        }
-        .description {
-            font-size: 1.2em;
-            line-height: 1.6;
             margin-bottom: 10px;
         }
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        .machines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .machine-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .machine-card:hover {
+            transform: translateY(-10px);
+        }
+        .machine-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: #666;
+        }
+        .machine-info {
+            padding: 25px;
+        }
+        .machine-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .machine-info p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .contact-section {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin: 20px;
+        }
+        .contact-name {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .contact-phone {
+            font-size: 1.5em;
+            color: #667eea;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .contact-phone:hover {
+            color: #764ba2;
+        }
+        .contact-form {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
         .footer {
-            margin-top: 30px;
-            font-size: 0.9em;
-            opacity: 0.8;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        @media (max-width: 768px) {
+            .new-year {
+                font-size: 2em;
+            }
+            .company-name {
+                font-size: 2.2em;
+            }
+            .tagline {
+                font-size: 1.1em;
+            }
+            .section h2 {
+                font-size: 2em;
+            }
+            .machines-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-card {
+                margin: 10px;
+                padding: 30px 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 Happy New Year! 🎉</h1>
-        
-        <div class="company-info">
+    <header class="header">
+        <div class="container">
+            <div class="new-year">🎉 Happy New Year 2024! 🎉</div>
             <div class="company-name">GVK Industries</div>
-            <div class="description">
-                Manufacturers of premium softy ice cream machines and complete range of snacks and beverages machines
+            <div class="tagline">Premium Food & Beverage Machine Manufacturers</div>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Our Machines</h2>
+            <div class="machines-grid">
+                <div class="machine-card">
+                    <div class="machine-image">🍦</div>
+                    <div class="machine-info">
+                        <h3>Softy Ice Cream Machine</h3>
+                        <p>Premium quality soft serve ice cream machines with advanced cooling technology and easy operation for commercial use.</p>
+                    </div>
+                </div>
+                <div class="machine-card" onclick="window.location.href='beverages.html'">
+                    <div class="machine-image">🥤</div>
+                    <div class="machine-info">
+                        <h3>Beverage Dispensers</h3>
+                        <p>High-capacity beverage machines for juices, sodas, and cold drinks with temperature control and hygiene features.</p>
+                    </div>
+                </div>
+                <div class="machine-card" onclick="window.location.href='snacks.html'">
+                    <div class="machine-image">🍿</div>
+                    <div class="machine-info">
+                        <h3>Snack Making Machines</h3>
+                        <p>Complete range of snack preparation machines including popcorn makers, sandwich grills, and multi-purpose food processors.</p>
+                    </div>
+                </div>
+                <div class="machine-card">
+                    <div class="machine-image">☕</div>
+                    <div class="machine-info">
+                        <h3>Coffee & Tea Machines</h3>
+                        <p>Professional coffee and tea brewing machines with multiple options and consistent quality for commercial establishments.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="footer">
-            This page is maintained by GVK Industries
+    </section>
+
+    <section class="section contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-card">
+                <div class="contact-name">Kovuri Gopal</div>
+                <a href="tel:9000919290" class="contact-phone">📞 9000919290</a>
+            </div>
+            
+            <div class="contact-form">
+                <h3 style="text-align: center; margin-bottom: 30px; color: #333;">Get In Touch</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Cell Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                    <div id="successMessage" class="success-message">
+                        Thank you! Your inquiry has been received. We will contact you soon.
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GVK Industries. All rights reserved. | This page is maintained by GVK Industries</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html> successfully. We will contact you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GVK Industries. All rights reserved. | This page is maintained by GVK Industries</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            // Create email content
+            const subject = 'New Inquiry from GVK Industries Website';
+            const body = `New customer inquiry:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nThis inquiry was submitted from the GVK Industries website.`;
+            
+            // Send email using mailto (opens user's email client)
+            const mailtoLink = `mailto:engunitesh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(mailtoLink);
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+    </script>
 </body>
 </html>

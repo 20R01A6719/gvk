@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Machines - GVK Industries</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .company-name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .machines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .machine-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .machine-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        .machine-info {
+            padding: 25px;
+        }
+        .machine-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .machine-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .features {
+            list-style: none;
+            margin-top: 15px;
+        }
+        .features li {
+            padding: 5px 0;
+            color: #555;
+        }
+        .features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        <div class="company-name">Snack Making Machines</div>
+        <p>Professional Snack Preparation Equipment</p>
+    </header>
+
+    <div class="container">
+        <div class="machines-grid">
+            <div class="machine-card">
+                <div class="machine-image" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=300&fit=crop');"></div>
+                <div class="machine-info">
+                    <h3>Popcorn Making Machine</h3>
+                    <p>Commercial popcorn maker with large capacity kettle and warming system.</p>
+                    <ul class="features">
+                        <li>8oz Kettle Capacity</li>
+                        <li>Warming Deck</li>
+                        <li>Easy Operation</li>
+                        <li>Stainless Steel Construction</li>
+                    </ul>
+                    <div class="price">₹25,000 - ₹40,000</div>
+                </div>
+            </div>
+
+            <div class="machine-card">
+                <div class="machine-image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop');"></div>
+                <div class="machine-info">
+                    <h3>Sandwich Grill Machine</h3>
+                    <p>Heavy duty sandwich grilling machine for cafes and restaurants.</p>
+                    <ul class="features">
+                        <li>Non-stick Plates</li>
+                        <li>Temperature Control</li>
+                        <li>Timer Function</li>
+                        <li>Compact Design</li>
+                    </ul>
+                    <div class="price">₹15,000 - ₹25,000</div>
+                </div>
+            </div>
+
+            <div class="machine-card">
+                <div class="machine-image" style="background-image: url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop');"></div>
+                <div class="machine-info">
+                    <h3>French Fries Machine</h3>
+                    <p>Deep fryer machine specially designed for making crispy french fries.</p>
+                    <ul class="features">
+                        <li>Large Oil Capacity</li>
+                        <li>Temperature Control</li>
+                        <li>Safety Features</li>
+                        <li>Easy Cleaning</li>
+                    </ul>
+                    <div class="price">₹30,000 - ₹50,000</div>
+                </div>
+            </div>
+
+            <div class="machine-card">
+                <div class="machine-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop');"></div>
+                <div class="machine-info">
+                    <h3>Pizza Oven Machine</h3>
+                    <p>Electric pizza oven for making fresh pizzas with consistent results.</p>
+                    <ul class="features">
+                        <li>High Temperature Heating</li>
+                        <li>Multiple Deck Options</li>
+                        <li>Digital Controls</li>
+                        <li>Energy Efficient</li>
+                    </ul>
+                    <div class="price">₹65,000 - ₹95,000</div>
+                </div>
+            </div>
+
+            <div class="machine-card">
+                <div class="machine-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop');"></div>
+                <div class="machine-info">
+                    <h3>Waffle Making Machine</h3>
+                    <p>Commercial waffle maker for crispy and delicious waffles.</p>
+                    <ul class="features">
+                        <li>Non-stick Coating</li>
+                        <li>Adjustable Temperature</li>
+                        <li>Quick Heating</li>
+                        <li>Durable Construction</li>
+                    </ul>
+                    <div class="price">₹20,000 - ₹35,000</div>
+                </div>
+            </div>
+
+            <div class="machine-card">
+                <div class="machine-image" style="background-image: url('https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=400&h=300&fit=crop');"></div>
+                <div class="machine-info">
+                    <h3>Donut Making Machine</h3>
+                    <p>Automatic donut fryer for consistent and perfect donuts every time.</p>
+                    <ul class="features">
+                        <li>Automatic Operation</li>
+                        <li>Oil Temperature Control</li>
+                        <li>High Production Rate</li>
+                        <li>Easy Maintenance</li>
+                    </ul>
+                    <div class="price">₹55,000 - ₹75,000</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
